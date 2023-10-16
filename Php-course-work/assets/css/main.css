@@ -9,92 +9,101 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: Montserrat, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #fefae0;
 }
-
 
 header {
   width: 100%;
+  background-color: #283618;
+  color: #fefae0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 20px 10px;
-  margin-bottom: 50px;
+  justify-content: space-between;
+  padding: 20px 5%;
 }
 
 .wrap-logo {
   display: flex;
   align-items: center;
- 
 }
 
 header a {
-  color: #212121;
-  padding: 12px;
+  color: #fefae0;
+  margin: 0 10px;
   text-decoration: none;
-  font-size: 18px; 
-  border-radius: 4px;
+  font-size: 16px; 
+  transition: color 0.3s;
 }
 
 header a.logo {
-  font-size: 25px;
+  font-size: 28px;
   font-weight: bold;
 }
 
-header a:hover {
-  background-color: #7c9ab7;
-  color: #212121;
-}
-
-header a.active {
-  background-color: #7c9ab7;
+header a:hover, header a.active {
+  color: #dda15e;
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  }
+}
 
 a {
-  color: #7c9ab7;
-  font-weight: bold;
+  color: #dda15e;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 p {
-  margin: 10px 0;
+  margin: 15px 0;
+  line-height: 1.6;
 }
 
 form {
   display: flex;
   flex-direction: column;
   width: 400px;
+  background-color: #fefae0;
+  padding: 20px;
+  border: 2px solid #606c38;
+  border-radius: 8px;
 }
 
 input {
   margin: 10px 0;
-  padding: 10px;
-  border: unset;
-  border-bottom: 2px solid #e3e3e3;
-  outline: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid #606c38;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #dda15e;
 }
 
 button {
-  padding: 10px;
-  background: #e3e3e3;
-  border: unset;
+  padding: 10px 15px;
+  background-color: #bc6c25;
+  color: #fefae0;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #dda15e;
 }
 
 .error {
-  border-bottom: 2px solid #ff4332;
+  border-color: #bc6c25;
 }
 
 .msg {
-  border: 2px solid #ffa908;
+  background-color: #dda15e;
   border-radius: 3px;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   font-weight: bold;
 }
@@ -104,82 +113,74 @@ button {
 }
 
 .logout {
-  color: #b7625c;
+  color: #bc6c25;
 }
 
 .navigation-post {
   margin: 0 auto;
-  margin-bottom: 50px;
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 20px 0;
+  background-color: #fefae0;
 }
 
 .navigation-post__list {
-  max-width: 300px;
-  list-style: none;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .navigation-post__item {
-  margin-left: 1rem;
+  margin-left: 10px;
+  list-style: none;
 }
 
 .navigation-post__item > .active {
-  padding: 15px;
-  background-color: #212121;
+  background-color: #283618;
+  padding: 10px 20px;
   border-radius: 20px;
-  color: #e3e3e3;
 }
+
 .message__label {
-  font-size: 1.3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-size: 1.2rem;
 }
 
 .message__textarea {
-  margin: 1rem 0rem;
-  border: 3px solid #7c9ab7;
-  border-radius: 1rem;
+  width: 100%;
+  border: 2px solid #dda15e;
+  border-radius: 4px;
+  padding: 10px 15px;
 }
 
 .message__bth {
-  padding: 1rem;
-  border-radius: 1rem;
-  background-color: #7c9ab7;
-  color: white;
-  font-size: 1.3rem;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background-color: #bc6c25;
+  color: #fefae0;
+  transition: background-color 0.3s;
 }
 
-.message__bth:hover {
-  background-color: #212121;
-}
-
-.message__bth:focus {
-  background-color: #212121;
+.message__bth:hover, .message__bth:focus {
+  background-color: #606c38;
 }
 
 .news-line{
-  max-width: 1000px;
+  max-width: 900px;
   width: 100%;
 }
 
 .news-line__list {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .news-line__item {
-  background-color: #7c9ab7;
-  color: white;
-  max-width: 300px;
-  margin: 2rem;
-  padding: 1rem;
-  border-radius: 1rem;
+  background-color: #606c38;
+  color: #fefae0;
+  max-width: 280px;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .news-line__message {
