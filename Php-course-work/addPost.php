@@ -38,10 +38,10 @@ session_start();
   </main>
   <footer>
   <?php
-        if ($_SESSION['message']) {
-            echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
-        }
-        unset($_SESSION['message']);
+        if (isset($_SESSION['message']) && $_SESSION['message']) {
+          echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
+          unset($_SESSION['message']);
+      }
     ?>
   </footer>
 </body>

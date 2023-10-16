@@ -45,10 +45,10 @@
                 У вас уже есть аккаунт? - <a href="./index.php">авторизируйтесь</a>!
             </p>
             <?php
-                if ($_SESSION['message']) {
+                if (isset($_SESSION['message']) && $_SESSION['message']) {
                     echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
+                    unset($_SESSION['message']);
                 }
-                unset($_SESSION['message']);
             ?>
         </form>
     </main>
